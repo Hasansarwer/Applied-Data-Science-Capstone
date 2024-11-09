@@ -79,7 +79,7 @@ def update_scatter_plot(selected_site, payload_range):
     if selected_site != 'ALL':
         filtered_df = filtered_df[filtered_df['Launch Site'] == selected_site]
 
-    fig = px.scatter(filtered_df, x='Payload Mass (kg)', y='class',
+    fig = px.scatter(filtered_df, x='Payload Mass (kg)', y='class', color = 'Booster Version Category',
                      title='Payload vs. Launch Outcome')
     return fig
 
